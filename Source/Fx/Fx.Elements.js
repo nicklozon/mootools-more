@@ -46,7 +46,7 @@ Fx.Elements = new Class({
 			if (!this.elements[i]) continue;
 
 			var iNow = now[i];
-            if (typeof iNow == 'string') iNow = this.search(iNow);
+			if (typeof iNow == 'string') iNow = this.search(iNow);
 			for (var p in iNow) this.render(this.elements[i], p, iNow[p], this.options.unit);
 		}
 
@@ -61,7 +61,7 @@ Fx.Elements = new Class({
 			if (!this.elements[i]) continue;
 
 			var iProps = obj[i], iFrom = from[i] = {}, iTo = to[i] = {};
-            if (typeof iProps == 'string') iProps = this.search(iProps);
+			if (typeof iProps == 'string') iProps = this.search(iProps);
 			for (var p in iProps){
 				var parsed = this.prepare(this.elements[i], p, iProps[p]);
 				iFrom[p] = parsed.from;
